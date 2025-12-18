@@ -1,0 +1,124 @@
+<!-- MARK: гриды -->
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Личный кабинет</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="menu">
+                <a href="./index.html"><img class="menu-logo" src="media/logo.png" alt="«Изенгард»" /></a>
+                <a href="service.html" class="menu-button">Услуги</a>
+                <a href="expertise.html" class="menu-button">Экспертиза</a>
+                <a class="menu-button menu-init active">Личный кабинет</a>
+            </nav>
+        </header>
+        <div class="content">
+            <div class="screen-free account-screen-free">
+                <div class="screen-content account-screen-content">
+                    <div class="dashboard-grid-top">
+                        <div class="card-outer card-wide">
+                            <div class="card-inner-flex">
+                                <h2 class="heading-large" style="font-size: 48px">Активные стратегии</h2>
+                                <p class="description">Смотреть действующие стратегии, участвующих агентов, состояние зависимостей</p>
+                                <button class="button button-wide">Перейти</button>
+                            </div>
+                        </div>
+                        <div class="card-outer card-square">
+                            <div class="card-inner-flex">
+                                <h2 class="heading-small" style="font-size: 32px">Отчеты</h2>
+                                <p class="description">Регулярная отчётность, внеочередной аудит</p>
+                                <button class="button button-full-width">Перейти</button>
+                            </div>
+                        </div>
+                        <div class="card-outer card-square">
+                            <div class="card-inner-profile">
+                                <h2 class="heading-small" style="font-size: 32px">Профиль</h2>
+                                <p class="description" style="width: 100%">Вся необходимая документаця на расстоянии вытянутой руки</p>
+                                <button class="button button-full-width">Перейти</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-grid-bottom">
+                        <div class="card-outer">
+                            <div class="placeholder-card-inner">
+                                <h2 class="heading-small" style="font-size: 24px">Сессия: 986845ea-d167-4e8d-9673-9acc1c349a2f</h2>
+                            </div>
+                        </div>
+                        <div class="card-outer">
+                            <div class="card-inner-payment">
+                                <div>
+                                    <h2 class="heading-small" style="font-size: 32px">Оплата услуг</h2>
+                                    <p class="description description-full">И консультация</p>
+                                </div>
+                                <a href="initiation.html" class="button button-full">Перейти в защищенный диалог</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-free" style="background: none; margin: 40px 0 60px">
+                <div class="screen-content">
+                    <h2 style="text-align: left; width: 100%; font-size: 32px">Экстренные контакты</h2>
+                    <div class="account-grid" id="account-grid">
+                        <div class="account-grid-row">
+                            <div class="account-grid-cell">Клининг</div>
+                            <div class="account-grid-cell">Apex Cleaning Solutions (Toronto, Canada)</div>
+                            <div class="account-grid-cell">+1-416-555-0198</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="screen-free">
+                <div class="screen-content">
+                    <span>© 2025 Isengard Inc.<br />All rights reserved.</span>
+                    <span
+                        ><a href="./index.html">RU</a> <a href="./index.html">EN</a> <a href="./index.html">ES</a> <a href="./index.html">ZH</a>
+                        <a href="./index.html">HI</a> <a href="./index.html">AR</a> <a href="./index.html">PT</a> <a href="./index.html">BN</a>
+                        <a href="./index.html">FR</a> <a href="./index.html">DE</a> <a href="./index.html">JA</a> <a href="./index.html">IT</a>
+                        <a href="./index.html">UR</a> <a href="./index.html">TE</a> <a href="./index.html">MR</a> <a href="./index.html">VI</a>
+                        <a href="./index.html">KO</a> <a href="./index.html">TR</a> <a href="./index.html">TA</a> <a href="./index.html">PA</a></span
+                    >
+                </div>
+            </footer>
+        </div>
+        <script>
+            const data = [
+                ["Клининг", "Apex Cleaning Solutions (Toronto, Canada)", "+1-416-555-0198"],
+                ["Клининг", "Global Maintenance Group (2012, branches in Europe)", "www.globalmaintgroup.com"],
+                ["Информационная безопасность", "Nexus Tech Guard (enterprise networks)", "secure@nexustechguard.net"],
+                ["Информационная безопасность", "Vertex Data Shield (based in Singapore)", "IP: 206.18.35.100 (VPN endpoint)"],
+                ["Логистика", "TransGlobal Freight (international shipping)", "+44-20-7946-0123"],
+                ["Частная охранная компания", "EliteServ Protection (executive security focus)", "www.eliteserv.com"],
+                ["Частная охранная компания", "Summit Security Partners (global operations)", "+49-30-555-6789"],
+                ["Финансовый консалтинг", "Meridian Finance Group (founded in Zurich, 2015)", "+41-44-555-1122"],
+                ["Юридические услуги", "Alliance Law Associates (corporate compliance)", "www.alliancelaw.net"],
+                ["Медицинская логистика", "Vital Transport Solutions (pharma)", "+1-212-555-0345"],
+                ["Коммуникационные системы", "GlobalConnect (telecom infrastructure)", "+33-1-5555-7890"],
+                ["R&D", "Insight Analytics Lab", "service@insightlab.com"],
+            ];
+
+            const grid = document.getElementById("account-grid");
+            if (grid.children.length > 0) {
+                data.shift();
+            }
+
+            data.forEach((rowData) => {
+                const row = document.createElement("div");
+                row.className = "account-grid-row";
+
+                rowData.forEach((cellData) => {
+                    const cell = document.createElement("div");
+                    cell.className = "account-grid-cell";
+                    cell.textContent = cellData;
+                    row.appendChild(cell);
+                });
+
+                grid.appendChild(row);
+            });
+        </script>
+    </body>
+</html>
